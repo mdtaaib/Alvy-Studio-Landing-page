@@ -41,6 +41,54 @@ main {
   gap: 0rem;
   align-items: center;
 }
+main nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding: 1rem;
+}
+main nav .logo {
+  padding-left: 1rem;
+  cursor: pointer;
+}
+main nav .menu ul {
+  display: flex;
+  gap: 0.6rem;
+}
+main nav .menu ul .mhide {
+  display: none;
+}
+main nav .menu ul .btn {
+  background-color: #CEBD63;
+  color: #1E1E1E;
+}
+main nav .menu ul .btn button {
+  background-color: transparent;
+  border: none;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-family: button;
+  cursor: pointer;
+}
+main nav .menu ul li {
+  list-style: none;
+  text-transform: uppercase;
+  font-family: button;
+  padding: 0.8rem 1rem;
+  background-color: #1E1E1E;
+  border-radius: 0.7rem;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+main nav .menu ul li span {
+  background-color: #CEBD63;
+  color: #1E1E1E;
+  border-radius: 50%;
+  padding: 2px 7px;
+  font-size: 0.7rem;
+}
 main section.view1 {
   width: 100%;
   display: flex;
@@ -337,11 +385,147 @@ main section.view6 .cta button i {
   cursor: pointer;
   color: white;
 }
+main footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+main footer .left {
+  background-color: #1E1E1E;
+  border-radius: 0.7rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+main footer .left img {
+  cursor: pointer;
+  width: 4rem;
+}
+main footer .left .social {
+  display: flex;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+}
+main footer .left .social i {
+  padding: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+main footer .right {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+main footer .right .top {
+  background-color: #1E1E1E;
+  border-radius: 0.7rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+main footer .right .top .links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: start;
+}
+main footer .right .top .links .btn {
+  background-color: #CEBD63;
+  color: #1E1E1E;
+  border: none;
+  border-radius: 0.7rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-family: button;
+  cursor: pointer;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+}
+main footer .right .top .links h3 {
+  font-family: primary;
+  font-weight: 300;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+main footer .right .top .links ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main footer .right .top .links ul li {
+  list-style: none;
+  cursor: pointer;
+  font-family: button;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  color: rgba(244, 242, 237, 0.6);
+  text-transform: uppercase;
+}
+main footer .right .bottom {
+  background-color: #1E1E1E;
+  border-radius: 0.7rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main footer .right .bottom .made {
+  display: flex;
+  justify-content: center;
+}
+main footer .right .bottom .made p {
+  font-family: button;
+  font-size: 1rem;
+  color: rgba(244, 242, 237, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+main footer .right .bottom .gotop {
+  display: flex;
+  justify-content: center;
+}
+main footer .right .bottom .gotop p {
+  font-family: button;
+  font-size: 1rem;
+  color: rgba(244, 242, 237, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white;
+}
+main footer .right .bottom .gotop p button {
+  background-color: transparent;
+  border: none;
+}
+main footer .right .bottom .gotop p button i {
+  padding: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: white;
+}
 
 @media (min-width: 900px) {
+  main nav .menu ul .mhide {
+    display: flex;
+  }
   main section.view1 {
     flex-direction: row;
-    padding: 4rem 1rem 0rem 1rem;
+    padding: 0rem 1rem 0rem 1rem;
     justify-content: space-between;
   }
   main section.view1 .top,
@@ -452,5 +636,24 @@ main section.view6 .cta button i {
   main section.view6 .cta button {
     width: 20%;
     border-radius: 0.7rem;
+  }
+  main footer {
+    flex-direction: row;
+  }
+  main footer .left {
+    justify-content: space-between;
+  }
+  main footer .right .top {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3rem;
+  }
+  main footer .right .top .links {
+    width: 33%;
+  }
+  main footer .right .bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3rem 1rem;
   }
 }/*# sourceMappingURL=style.css.map */

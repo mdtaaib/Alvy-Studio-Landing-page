@@ -48,6 +48,65 @@ main {
     @include flex-column(0rem);
     align-items: center;
 
+    nav {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        padding: 1rem;
+
+        .logo {
+            padding-left: 1rem;
+            cursor: pointer;
+        }
+
+        .menu {
+
+            ul {
+                display: flex;
+                gap: 0.6rem;
+
+                .mhide {
+                    display: none;
+                }
+
+                .btn {
+                    background-color: #CEBD63;
+                    color: #1E1E1E;
+
+                    button {
+                        background-color: transparent;
+                        border: none;
+                        font-size: 0.8rem;
+                        text-transform: uppercase;
+                        font-family: button;
+                        cursor: pointer;
+                    }
+                }
+
+                li {
+                    list-style: none;
+                    text-transform: uppercase;
+                    font-family: button;
+                    padding: 0.8rem 1rem;
+                    background-color: #1E1E1E;
+                    border-radius: 0.7rem;
+                    font-size: 0.8rem;
+                    letter-spacing: 2px;
+                    cursor: pointer;
+
+                    span {
+                        background-color: #CEBD63;
+                        color: #1E1E1E;
+                        border-radius: 50%;
+                        padding: 2px 7px;
+                        font-size: 0.7rem;
+                    }
+                }
+            }
+        }
+    }
+
     section.view1 {
         width: 100%;
         @include flex-column(1rem);
@@ -61,7 +120,6 @@ main {
                 border-radius: 0.7rem;
             }
         }
-
 
         .bottom {
             background-color: #1E1E1E;
@@ -78,8 +136,6 @@ main {
 
             .text {
                 @include flex-column(1rem);
-
-
 
                 h1 {
                     font-family: primary;
@@ -318,6 +374,7 @@ main {
 
             .text {
                 @include flex-column(1.5rem);
+
                 h4 {
                     font-family: button;
                     text-transform: uppercase;
@@ -359,15 +416,165 @@ main {
             }
         }
     }
+
+    footer {
+        width: 100%;
+        @include flex-column(1rem);
+        padding: 1rem;
+
+        .left {
+            background-color: #1E1E1E;
+            border-radius: 0.7rem;
+            padding: 2rem;
+            @include flex-column(6rem);
+
+            img {
+                cursor: pointer;
+                width: 4rem;
+            }
+
+            .social {
+                display: flex;
+                column-gap: 1rem;
+
+                i {
+                    padding: 0.8rem;
+                    background-color: rgba(255, 255, 255, 0.1);
+                    backdrop-filter: blur(10px);
+                    border-radius: 50%;
+                    border: 1px solid rgba(255, 255, 255, 0.3);
+                    cursor: pointer;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+
+        .right {
+            @include flex-column(1rem);
+            width: 100%;
+
+            .top {
+                background-color: #1E1E1E;
+                border-radius: 0.7rem;
+                padding: 2rem;
+                @include flex-column(4rem);
+
+                .links {
+                    @include flex-column(1rem);
+                    align-items: start;
+
+                    .btn {
+                        background-color: #CEBD63;
+                        color: #1E1E1E;
+                        border: none;
+                        border-radius: 0.7rem;
+                        font-size: 0.8rem;
+                        text-transform: uppercase;
+                        font-family: button;
+                        cursor: pointer;
+                        padding: 1rem 1.5rem;
+                        font-size: 1rem;
+                    }
+
+                    h3 {
+                        font-family: primary;
+                        font-weight: 300;
+                        font-size: 1.5rem;
+                        text-transform: uppercase;
+                    }
+
+                    ul {
+                        @include flex-column(2rem);
+
+                        li {
+                            list-style: none;
+                            cursor: pointer;
+                            font-family: button;
+                            font-size: 1rem;
+                            letter-spacing: 1px;
+                            color: rgba(244, 242, 237, .6);
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+
+            }
+
+            .bottom {
+                background-color: #1E1E1E;
+                border-radius: 0.7rem;
+                padding: 2rem;
+                @include flex-column(2rem);
+
+                .made {
+                    display: flex;
+                    justify-content: center;
+
+                    p {
+                        font-family: button;
+                        font-size: 1rem;
+                        color: rgba(244, 242, 237, .6);
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        text-align: center;
+                    }
+                }
+
+                .gotop {
+                    display: flex;
+                    justify-content: center;
+
+                    p {
+                        font-family: button;
+                        font-size: 1rem;
+                        color: rgba(244, 242, 237, .6);
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        color: white;
+
+                        button {
+                            background-color: transparent;
+                            border: none;
+
+                            i {
+                                padding: 0.8rem;
+                                background-color: rgba(255, 255, 255, 0.1);
+                                backdrop-filter: blur(10px);
+                                border-radius: 50%;
+                                border: 1px solid rgba(255, 255, 255, 0.3);
+                                cursor: pointer;
+                                font-size: 1.2rem;
+                                color: white;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
 }
 
 
 @media (min-width:900px) {
     main {
 
+        nav {
+
+            .menu {
+
+                ul {
+
+                    .mhide {
+                        display: flex;
+                    }
+                }
+            }
+        }
+
         section.view1 {
             flex-direction: row;
-            padding: 4rem 1rem 0rem 1rem;
+            padding: 0rem 1rem 0rem 1rem;
             justify-content: space-between;
 
             .top,
@@ -510,6 +717,33 @@ main {
                 button {
                     width: 20%;
                     border-radius: 0.7rem;
+                }
+            }
+        }
+
+        footer {
+            flex-direction: row;
+
+            .left {
+                justify-content: space-between;
+            }
+
+            .right {
+
+                .top {
+                    flex-direction: row;
+                    justify-content: space-between;
+                    padding: 3rem;
+
+                    .links {
+                        width: 33%;
+                    }
+                }
+
+                .bottom {
+                    flex-direction: row;
+                    justify-content: space-between;
+                    padding: 3rem 1rem;
                 }
             }
         }
